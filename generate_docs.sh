@@ -47,4 +47,8 @@ gomarkdoc --output ./docs/docs.md ./...
 # Convert Markdown to HTML using pandoc
 pandoc ./docs/docs.md --toc --metadata title="Documentation" -c https://unpkg.com/sakura.css/css/sakura.css --standalone -o ./docs/documentation.html
 
+# Add and commit changes
+git add ./docs/docs.md ./docs/documentation.html
+git commit -m "doc update"
+
 exit 0
