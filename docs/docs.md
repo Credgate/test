@@ -6,7 +6,8 @@
 import "."
 ```
 
- ## Index
+
+## Index
 
 
 
@@ -16,7 +17,8 @@ import "."
 import "."
 ```
 
- ## Index
+
+## Index
 
 - [type People](<#People>)
   - [func \(p \*People\) GetAge\(\) int](<#People.GetAge>)
@@ -26,7 +28,8 @@ import "."
 
 
 <a name="People"></a>
- ## type People
+
+## type People
 
 People is a struct that contains a name and an age
 
@@ -38,7 +41,9 @@ type People struct {
 ```
 
 <a name="People.GetAge"></a>
- ### func \(\*People\) GetAge
+
+
+### func \(\*People\) GetAge
 
 ```go
 func (p *People) GetAge() int
@@ -47,7 +52,9 @@ func (p *People) GetAge() int
 GetAge returns the age of the People
 
 <a name="People.GetName"></a>
- ### func \(\*People\) GetName
+
+
+### func \(\*People\) GetName
 
 ```go
 func (p *People) GetName() string
@@ -56,7 +63,9 @@ func (p *People) GetName() string
 GetName returns the name of the People
 
 <a name="People.SetAge"></a>
- ### func \(\*People\) SetAge
+
+
+### func \(\*People\) SetAge
 
 ```go
 func (p *People) SetAge(age int)
@@ -65,7 +74,9 @@ func (p *People) SetAge(age int)
 SetAge sets the age of the People Test doc
 
 <a name="People.SetName"></a>
- ### func \(\*People\) SetName
+
+
+### func \(\*People\) SetName
 
 ```go
 func (p *People) SetName(name string)
@@ -79,7 +90,8 @@ SetName sets the name of the People
 import "."
 ```
 
- ## Index
+
+## Index
 
 - [type Places](<#Places>)
   - [func \(p \*Places\) GetLocation\(\) string](<#Places.GetLocation>)
@@ -89,7 +101,8 @@ import "."
 
 
 <a name="Places"></a>
- ## type Places
+
+## type Places
 
 Places is a struct that contains a name and a location
 
@@ -101,7 +114,9 @@ type Places struct {
 ```
 
 <a name="Places.GetLocation"></a>
- ### func \(\*Places\) GetLocation
+
+
+### func \(\*Places\) GetLocation
 
 ```go
 func (p *Places) GetLocation() string
@@ -110,7 +125,9 @@ func (p *Places) GetLocation() string
 GetLocation returns the location of the Places
 
 <a name="Places.GetName"></a>
- ### func \(\*Places\) GetName
+
+
+### func \(\*Places\) GetName
 
 ```go
 func (p *Places) GetName() string
@@ -119,7 +136,9 @@ func (p *Places) GetName() string
 GetName returns the name of the Places
 
 <a name="Places.SetLocation"></a>
- ### func \(\*Places\) SetLocation
+
+
+### func \(\*Places\) SetLocation
 
 ```go
 func (p *Places) SetLocation(location string)
@@ -128,7 +147,9 @@ func (p *Places) SetLocation(location string)
 SetLocation sets the location of the Places
 
 <a name="Places.SetName"></a>
- ### func \(\*Places\) SetName
+
+
+### func \(\*Places\) SetName
 
 ```go
 func (p *Places) SetName(name string)

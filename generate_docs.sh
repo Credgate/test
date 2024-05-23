@@ -49,15 +49,16 @@ FILE="./docs/docs.md"
 
 # Ensure the file exists
 if [[ -f "$FILE" ]]; then
+  echo "TRIGGER"
   # Detect OS and set sed command accordingly
   if [[ "$OSTYPE" == "darwin"* ]]; then
     # macOS
-    sed -i '' 's/^##/ ##/' "$FILE"
-    sed -i '' 's/^###/ ###/' "$FILE"
+    sed -i '' 's/^##/\n##/' "$FILE"
+    sed -i '' 's/^###/\n###/' "$FILE"
   else
     # Linux and other Unix-like systems
-    sed -i 's/^##/ ##/' "$FILE"
-    sed -i 's/^###/ ###/' "$FILE"
+    sed -i 's/^##/\n##/' "$FILE"
+    sed -i 's/^###/\n###/' "$FILE"
   fi
 else
   echo "File $FILE does not exist."
