@@ -42,9 +42,9 @@ if ! command_exists pandoc; then
 fi
 
 # Generate Markdown documentation using gomarkdoc
-gomarkdoc --output /docs/docs.md .
+gomarkdoc --output ./docs/docs.md ./...
 
 # Convert Markdown to HTML using pandoc
-pandoc /docs/docs.md --toc --metadata title="Documentation" -c https://unpkg.com/sakura.css/css/sakura.css --standalone -o /docs/documentation.html
+pandoc ./docs/docs.md --toc --metadata title="Documentation" -c https://unpkg.com/sakura.css/css/sakura.css --standalone -o ./docs/documentation.html
 
 exit 0
