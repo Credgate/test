@@ -22,6 +22,7 @@ func (p *People) SetName(name string) {
 }
 
 // SetAge sets the age of the People
+// Test doc
 func (p *People) SetAge(age int) {
 	p.Age = age
 }
