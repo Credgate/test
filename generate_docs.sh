@@ -44,7 +44,29 @@ fi
 # Generate Markdown documentation using gomarkdoc
 gomarkdoc ./... --output ./docs/docs.md
 
+# File to process
+FILE="./docs/docs.md"
+
+# Ensure the file exists
+if [[ -f "$FILE" ]]; then
+  # Detect OS and set sed command accordingly
+  if [[ "$OSTYPE" == "darwin"* ]]; then
+    # macOS
+    sed -i '' 's/^##/ ##/' "$FILE"
+    sed -i '' 's/^###/ ###/' "$FILE"
+  else
+    # Linux and other Unix-like systems
+    sed -i 's/^##/ ##/' "$FILE"
+    sed -i 's/^###/ ###/' "$FILE"
+  fi
+else
+  echo "File $FILE does not exist."
+  exit 1
+fi
+
 # Convert Markdown to HTML using pandoc
-pandoc ./docs/docs.md --toc --metadata title="Documentation" -c https://unpkg.com/sakura.css/css/sakura.css --standalone -o ./docs/index.html
+pandoc ./docs/docs.md  --toc --metadata title="Documentation" -c https://unpkg.com/sakura.css/css/sakura.css --standalone -o ./docs/index.html
+
+
 
 exit 0
