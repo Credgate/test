@@ -47,6 +47,7 @@ gomarkdoc ./... --output ./docs/docs.md
 # File to process
 FILE="./docs/docs.md"
 
+# Add newlines before headers so that pandoc can generate the headers properly.
 # Ensure the file exists
 if [[ -f "$FILE" ]]; then
   # Detect OS and set sed command accordingly
