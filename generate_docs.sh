@@ -49,7 +49,6 @@ FILE="./docs/docs.md"
 
 # Ensure the file exists
 if [[ -f "$FILE" ]]; then
-  echo "TRIGGER"
   # Detect OS and set sed command accordingly
   if [[ "$OSTYPE" == "darwin"* ]]; then
     # macOS
