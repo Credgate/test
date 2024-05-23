@@ -1,0 +1,39 @@
+name: Update Documentation
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-docs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v3
+
+      - name: Set up Go
+        uses: actions/setup-go@v3
+        with:
+          go-version: '1.22.2'
+
+      - name: Check out the docs branch
+        run: |
+          git fetch origin
+          git checkout docs
+          git rebase origin/main
+
+      - name: Start GoDoc server
+        run: |
+          nohup godoc -http=:6060 &
+
+      - name: Download documentation using wget
+        run: |
+          wget -r -np -nH --cut-dirs=1 -P ./docs -p -E --convert-links http://localhost:6060/pkg/
+
+      - name: Commit and push changes
+        run: |
+          git add docs
+          git commit -m "Update documentation"
+          git push origin docs
