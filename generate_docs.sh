@@ -45,6 +45,6 @@ fi
 gomarkdoc --output ./docs/docs.md .
 
 # Convert Markdown to HTML using pandoc
-pandoc ./docs/docs.md --toc --metadata title="My Package - User Docs" -c https://unpkg.com/sakura.css/css/sakura.css --standalone -o docs/documentation.html
+pandoc /docs/docs.md --toc --metadata title="My Package - User Docs" -c https://unpkg.com/sakura.css/css/sakura.css --standalone -o /docs/documentation.html
 
 exit 0
